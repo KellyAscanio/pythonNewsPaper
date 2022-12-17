@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}ERROR{% endblock title %}
+{% block content %}
+<div class="error">
+<h1>No puedes modificar este articulo!!</h1>
+<a href="{% url 'article_list' %}">Regresar a la pagina inicial</a>
+</div>
+{% endblock content %}

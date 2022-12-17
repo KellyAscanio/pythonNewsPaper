@@ -1,0 +1,14 @@
+{%extends "base.html"%}
+
+{%block title %}Home{%endblock title%}
+
+{%block content%}
+    {%if user.is_authenticated%}
+        Hola {{user.username}}! Usted tiene {{user.age}} años.
+        <p><a href="{%url 'logout'%}">Cerrar Sesión</a></p>
+    {%else%}
+        <p>Usted no se ha identificado</p>
+        <a href="{%url 'login'%}">Iniciar Sesión</a>
+        <a href="{%url 'signup'%}">Inscribirse</a>
+    {%endif%}
+{%endblock content%}
